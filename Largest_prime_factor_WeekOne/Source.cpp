@@ -28,7 +28,10 @@ int main()
 
     }
 
-    printf("Max prime = %d \n", maxPrime);
+    printf(" \t\t\t\t-- Ans >> Max prime = %d -- \n", maxPrime);
+    printf("\t\t\t\t  ----- By Watcharapol -----\n");
+    printf("\t\t\t----- I started to fall in love with this. -----\n");
+
 
 
 
