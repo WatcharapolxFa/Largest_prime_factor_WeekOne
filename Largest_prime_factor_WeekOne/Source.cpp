@@ -2,23 +2,36 @@
 #define number 600851475143
 int main()
 {
-	long long num = 0;
-	int maxPrime = 0, oodPrime = 3; // จำนวนเฉพาะ
-	num = number;
-	printf("num =  %d \n ", num);
+    long long num = 0;
+    int maxPrime = 0, oodPrime = 3; // จำนวนเฉพาะ
+    num = number;
+    printf("num =  %d \n ", num);
+    while (num % 2 == 0)
+    {
+        maxPrime = 2;
+        num = num / 2;
+    }
+    printf("maxPrime = %d \t number /= %d  \n", maxPrime, number);
+    printf(" --------------------------  \n");
+    while (num != 1)
+    {
+        while (num % oodPrime == 0)
+        {
+            maxPrime = oodPrime;
+            printf("maxPrime = %d \t oodPrime = %d  \n", maxPrime, oodPrime);
+            printf(" --------------------------  \n\n");
+            num /= oodPrime;
+            printf("num = %d \t oodPrime /= %d  \n", num, oodPrime);
+            printf(" --------------------------  \n\n");
+        }
+        oodPrime += 2;
 
-	while (num % 2 == 0)
-	{
-		maxPrime = 2;
-		num = num / 2;
-	}
-	printf("maxPrime = %d \t number /= %d  \n", maxPrime, number);
-	
+    }
+
+    printf("Max prime = %d \n", maxPrime);
 
 
 
 
-
-
-	return 0;
+    return 0;
 }
